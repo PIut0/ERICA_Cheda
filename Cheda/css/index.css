@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+}
+
+.full_page{
+    width: 100%;
+    height: 100vh;
+    background: url(../img/main_bg.jpg) center center/100% no-repeat;
+}
+
+.main_content{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    max-width: 800px;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0px;
+    transform: translate(-50%,-50%);
+    background: rgba(255,255,230,0.6);
+    border-radius: 10px;
+}
+
+.logo{
+    margin-bottom: 50px;
+}
+
+.logo_img{
+    width: 200px;
+
+}
+
+.map{
+    border-radius: 10px;
+    overflow: hidden;
+}

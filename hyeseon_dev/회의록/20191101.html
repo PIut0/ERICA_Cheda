@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'NanumSquareRound';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'KOMACON';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/KOMACON.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            font-family: NanumSquareRound;
+        }
+
+        .full_page {
+            width: 100%;
+            height: 100vh;
+        }
+        
+        .title{
+            display: flex;
+            font-size: 50px;
+            padding: 20px 0 0 20px;
+        }
+
+        .content {
+            display: flex;
+            flex-flow: column;
+            width: max-content;
+            padding: 20px 30px;
+        }
+        .img{
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="full_page">
+        <div class="title">
+            <!-- 제목 -->
+            20191101 회의록
+        </div>
+        <div class="content">
+            <!-- 내용 -->
+            <h2 data-ke-size="size26"><span style="background-color: #c1bef9;">주제 선택 기준</span></h2>
+            <p>1. 완성도
+            <br>2. Front 위주
+            <br>3. 실용적인 idea(욕심이긴해요..)</p>
+            <h2><span style="background-color: #c1bef9;">우리의 역량?</span></h2>
+            <table style="border-collapse: collapse; width: 100%;" border="1" data-ke-style="style7">
+                <tbody>
+                    <tr>
+                        <td style="width: 50%; text-align: center;">혜선</td>
+                        <td style="width: 50%; text-align: center;">기성</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 50%;">
+                            <p>* Django</p>
+                            <p>* front의 기본적인 것</p>
+                        </td>
+                        <td style="width: 50%;">
+                            <p>* 대부분의 Front-end 작업</p>
+                            <p>* DB의 기초적인 것 : 개인 계정 관리</p>
+                            <p>* php, node.js</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2><span style="background-color: #c1bef9;">아이디어 도출 과정</span></h2>
+            <p>▶ 요즘 it 트랜드가 뭘까?<br>: VR, 클라우드, 온디맨드, 공유서비스(공유주방, 따릉이 등등), 큐레이션서비스</p>
+            <p><span style="color: #333333;">▶</span>&nbsp;관심있는 분야<br>: 교육 소프트웨어 - 백준, 인프런, 엔트리 ...<br>: 국가 공공기관에서 하는
+                프로그램들 알려주는 플랫폼</p>
+            <h2><span style="background-color: #c1bef9;">아이디어 구체화</span></h2>
+            <p>체택한 아이디어!!<br>: 국가 공공기관에서 하는 프로그램들을 사용자 위치를 기반으로 정리하여 알려주는 사이트</p>
+            <h3>Step1. 문제 인식</h3>
+            <p><span style="color: #333333;">1. 국가에서 운영하기에 가격이 비교적 저렴함에도 불구하고, 사람들의 참여도가 낮다.</span><br>2. 구민센터, 동사무소 등에서
+                하는 프로그램들에 대한 홍보부족<br> : 주로 건물 게시판에 붙어있거나, 구청사이트에 올라와있다. 다만, 구청 사이트는 구성이 복잡하여 찾기가 힘들다.</p>
+
+            <h3>Step2. 웹사이트 구성</h3>
+            <p>▷간단한 navigation : 장소 누르면 -> 해당 장소에서 진행하는 프로그램 목록 -> 프로그램 이름, 기간, 가격, 인원, 신청기간 등 정보 보여주기<br>▷detail : 장소는
+                7~10개. 각 장소마다 하는 프로그램 5~8개</p>
+            <img src="./img/20191101_pagestruct.png" alt="페이지ui대략그려봄" class="img">
+            <h2><span style="background-color: #f6e199;">To-Do (until 11/4)</span></h2>
+            <table style="border-collapse: collapse; width: 100%;" border="1" data-ke-style="style5">
+                <tbody>
+                    <tr>
+                        <td style="width: 33.3333%; text-align: center;">혜선</td>
+                        <td style="width: 33.3333%; text-align: center;">기성</td>
+                        <td style="width: 33.3333%; text-align: center;">공통</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 33.3333%;">
+                            <p>1. database 정리</p>
+                            <p>2. UI/UX 소스 찾아보기</p>
+                        </td>
+                        <td style="width: 33.3333%;">
+                            <p>1. 적합한 지도 API 찾기</p>
+                        </td>
+                        <td style="width: 33.3333%;">우리 서비스 네이밍 생각해오기</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'NanumSquareRound';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        * {
+            font-family: NanumSquareRound;
+        }
+
+        .full_page {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .title {
+            display: flex;
+            font-size: 50px;
+            padding: 20px 0 0 20px;
+        }
+
+        .content {
+            display: flex;
+            flex-flow: column;
+            width: max-content;
+            padding: 20px 30px;
+        }
+
+        .box {
+            display: flex;
+            flex-flow: row;
+        }
+
+        .box p {
+            font-size: 20px;
+        }
+
+        .img {
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="full_page">
+        <div class="title">
+            <!-- 제목 -->
+            20191108 회의록
+        </div>
+        <div class="content">
+            <!-- 내용 -->
+            <h2 data-ke-size="size26"><span style="background-color: #c1bef9;">디테일한 화면 레이아웃 구성</span></h2>
+            <div class="box">
+                <div>
+                    <p>● 메인페이지</p>
+                    <img src="./img/20191108_layout1.png" alt="" class="img">
+
+                </div>
+                <div>
+                    <p>● 장소를 눌렀을 때</p>
+                    <img src="./img/20191108_layout2.png" alt="" class="img">
+                </div>
+                <div>
+                    <p>● 프로그램 상세 페이지</p>
+                    <img src="./img/20191108_layout3.png" alt="" class="img">
+                </div>
+            </div>
+
+            <h2 data-ke-size="size26"><span style="background-color: #f6e199;">To-Do</span></h2>
+            <table style="border-collapse: collapse; width: 100%;" border="1" data-ke-style="style5">
+                <tbody>
+                    <tr>
+                        <td style="width: 33.3333%; text-align: center;">혜선</td>
+                        <td style="width: 33.3333%; text-align: center;">기성</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 33.3333%;">
+                            <p>1. 로고 디자인</p>
+                            <p>2. 회의록 정리</p>
+                        </td>
+                        <td style="width: 33.3333%;">1. 네이버 지도 API로 기능 구현</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

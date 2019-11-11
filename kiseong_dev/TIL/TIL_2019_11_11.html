@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'NanumSquareRound';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'KOMACON';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/KOMACON.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            font-family: NanumSquareRound;
+            margin: 0px;
+        }
+
+        pre{
+            background-color: #2a2a2a;
+            padding: 20px;
+            color: white;
+        }
+
+        .full_page {
+            width: 100%;
+            height: 100vh;
+        }
+        
+        .title{
+            display: flex;
+            font-size: 50px;
+            padding: 20px 0 0 20px;
+        }
+
+        .content {
+            display: flex;
+            flex-flow: column;
+            width: max-content;
+            padding: 20px 30px;
+        }
+        .img{
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="full_page">
+        <div class="title">
+            <!-- 제목 -->
+            [TIL] Node.js web server 와 mime type
+        </div>
+        <div class="content">
+            <!-- 내용 -->
+            <h2 data-ke-size="size26"><span style="background-color: #c1bef9;">TIL_2019_11_12</span></h2>
+                <p>Node.js 로 로컬 웹 서버를 구축하다가 겪은 일이다.</p>
+<p>&nbsp;</p>
+<p>로컬 웹 서버 상에서 Naver Map API의 활용을 연습하던 도중,</p>
+<p>css파일을 적용하게 되어 평소와 같이 링크를 하였다.</p>
+<pre id="code_1573456032254" class="html xml" data-ke-language="html" data-ke-type="codeblock"><code>&lt;link rel="stylesheet" href="./css/test.css" type="text/css"&gt;</code></pre>
+<p>&nbsp;</p>
+<p>그러나 웬일인지 로컬 서버에서는 적용되지 않았고,</p>
+<p>파일을 직접 열어보면 적용되어 있는것을 볼 수 있었다.</p>
+<p>&nbsp;</p>
+<p>이를 통해 css파일과 경로에는 문제가 없는것을 확인.</p>
+<p>Node.js 로 열은 서버에서 문제가 있다고 생각하고 문제를 탐색했다.</p>
+<p>&nbsp;</p>
+<p>열어놓은 로컬 서버에서 콘솔을 확인했다.</p>
+<p><figure class='imageblock alignLeft'><span data-url='https://k.kakaocdn.net/dn/cQDvRy/btqzH1cDR9C/xDNhoeR9kcLHGYWPYUopO1/img.png' data-lightbox='lightbox' data-alt='크롬 Console 에서 확인된 에러'><img src='https://k.kakaocdn.net/dn/cQDvRy/btqzH1cDR9C/xDNhoeR9kcLHGYWPYUopO1/img.png' srcset='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FcQDvRy%2FbtqzH1cDR9C%2FxDNhoeR9kcLHGYWPYUopO1%2Fimg.png' width="416" height="32"></span><figcaption>크롬 Console 에서 확인된 에러</figcaption></figure></p>
+<p>콘솔창을 확인해보니 이유는 모르겠지만 나의 css가 제대로 적용되지 않고 있는것은 알 수 있었다.</p>
+<p>에러를 읽고나니 mime type이 에러의 원인인것 같은데,</p>
+<p>그럼 대체 mime type은 뭘까 하는 생각이 들어 검색을 해봤다.</p>
+<p>&nbsp;</p>
+<p>브라우저는 서버에 HTTP 요청을 하는데(request) 서버는 HTTP 응답을 작성하게 된다.</p>
+<p>이때 요청과 응답은 모두 헤더를 포함하여 구성되어 있다. 이 헤더를 통해서,</p>
+<p>브라우저들은 리소스를 내려받았을 때에 해야할 기본적인 동작을 결정하게 된다.</p>
+<p>그때 결정하는 타입이 바로 mime type (content-type) 인 것이다.</p>
+<p>&nbsp;</p>
+<p>요약해서 말하면 css를 내려받았지만 잘못된 헤더를 받게되어 브라우저는 css를 제대로 동작시키지 못한것 같다.</p>
+<p>그 후 Node.js 로 구현한 로컬 웹 서버 코드를 보니 이해가 되었다.</p>
+<pre id="code_1573457437842" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>res.statusCode = 200; // 통신 성공
+res.setHeader("Content-Type", "text/html");</code></pre>
+<p>&nbsp;</p>
+<p>이제 문제는 어떻게 header에 파일일별로 content-type을 구분해 주느냐 였다.</p>
+<p>이와 같은 문제를 해결한 선행사례를 검색해 본 결과</p>
+<p>한 github 포스트에서 알맞은 해결방법을 찾을 수 있었다.</p>
+<p>&nbsp;</p>
+<p>Dictionary를 사용하여 불러올 리소스의 확장자에 따라 mimetype을 변경해주면 되었던 것이다.</p>
+<pre id="code_1573458152607" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>var mimeTypes = {
+    "html" : "text/html",
+    "jpeg" : "image/jpeg",
+    "jpg" : "image/jpeg",
+    "png" : "image/png",
+    "js" : "text/javascript",
+    "css" : "text/css"
+}
+
+/.../
+
+res.statusCode = 200; // 통신 성공
+var mimeType = mimeTypes[url.split('.').pop()];
+res.setHeader("Content-Type", mimeType);</code></pre>
+<p>&nbsp;</p>
+<p>위와같이 변경한 결과 원하는 결과를 얻을 수 있었다.</p><div class="container_postbtn #post_button_group">
+<br/><br/><p>원문 : https://plut0.tistory.com/2</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'NanumSquareRound';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        * {
+            font-family: NanumSquareRound;
+        }
+
+        .full_page {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .title {
+            display: flex;
+            font-size: 50px;
+            padding: 20px 0 0 20px;
+        }
+
+        .content {
+            display: flex;
+            flex-flow: column;
+            width: max-content;
+            padding: 20px 30px;
+        }
+
+        .img {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="full_page">
+        <div class="title">
+            <!-- 제목 -->
+            20191104 회의록
+        </div>
+        <div class="content">
+            <!-- 내용 -->
+            <h2 data-ke-size="size26"><span style="background-color: #c1bef9;">서비스 네이밍</span></h2>
+            <div><img src="./img/20191104_naming.png" alt="" class="img">
+            </div>
+            <div>
+                <p>서비스 특징들을 keyword로 뽑아보았다. 둥글둥글 하면서도 친근한 느낌의 이름을 짓고 싶었다.</p>
+            
+                <p>그 결과 나온 우리 서비스 이름 : <b><span style="color: #f89009;">체다<br /></span></b><span
+                        style="color: #f89009;"><span style="color: #000000;">슬로건은</span></span><b><span
+                            style="color: #f89009;"> 체험을 찾다.</span></b></p>
+            </div>
+
+            <h2><span style="background-color: #c1bef9;">필요한 기능<br /></span><span
+                    style="background-color: #c1bef9;"></span></h2>
+            <p>네이버 지도 API를 사용하기로 결정함 <br />1. 마우스로 움직여도 관악구를 넘어가지 않도록 지도를 제한해서 보여준다.<br />2. 관악구 district를 표시한다.<br />3.
+                핀으로 장소를 눌렀을 때 Zoom-in<br />4. 지도 밑에 장소 카드를 눌렀을 때 핀이 선택되게 하기.</p>
+            <h2><span style="background-color: #c1bef9;"><span style="background-color: #f6e199;">To-Do</span></span>
+            </h2>
+            <table style="border-collapse: collapse; width: 100%;" border="1" data-ke-style="style5">
+                <tbody>
+                    <tr>
+                        <td style="width: 33.3333%; text-align: center;">혜선</td>
+                        <td style="width: 33.3333%; text-align: center;">기성</td>
+                        <td style="width: 33.3333%; text-align: center;">공통</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 33.3333%;">
+                            <p>1. 로고 디자인</p>
+                            <p>2. UI/UX 소스 찾기</p>
+                        </td>
+                        <td style="width: 33.3333%;">1. 네이버 지도 API로 해당 기능 구현</td>
+                        <td style="width: 33.3333%;">
+                            <p>1. git repository 기본 설정하기</p>
+                            <p>2. TIL 작성</p>
+                            <p>3. 회의록 작성</p>
+                            <p>4. 디테일한 화면 레이아웃 구성</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>&nbsp;</p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

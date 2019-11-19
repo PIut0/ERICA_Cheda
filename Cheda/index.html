@@ -5,6 +5,8 @@
         <title>Cheda</title>
         <link rel="stylesheet" href="./css/font.css">
         <link rel="stylesheet" href="./css/index.css">
+        <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=p7ll3jv67z"></script>
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     </head>
     <body>
         <div class="slogan_div">
@@ -12,7 +14,7 @@
             <img class="logo_img" src="./img/logo_test1.png" alt="">
         </div>
         <div class="map_div">
-            <img src="./img/map_example.png" alt="">
+            <div id="map"></div>
         </div>
         <!-- <div class="full_page">
             <div class="main_content">
@@ -25,4 +27,16 @@
             </div>
         </div> -->
     </body>
+    <script>
+        var gwanak = new naver.maps.LatLngBounds(
+            new naver.maps.LatLng(37.4555629, 126.8901483),
+            new naver.maps.LatLng(37.4965285, 126.9824899)
+        );
+        var mapOptions = {
+            minZoom: 9,
+            maxBounds: gwanak
+        };
+        
+        var map = new naver.maps.Map('map', mapOptions);
+    </script>
 </html>

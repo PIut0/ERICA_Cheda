@@ -3,18 +3,28 @@
     <head>
         <meta charset="utf-8"/>
         <title>Cheda</title>
+        <!-- Slick.js - Open Source Javascript Framework-->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
         <link rel="stylesheet" href="./css/font.css">
         <link rel="stylesheet" href="./css/index.css">
         <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=p7ll3jv67z"></script>
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
     </head>
     <body>
         <div class="slogan_div">
+            <div class="img_cover"></div>
             <p class="slogan">일상속 <span>체</span>험을 찾<span>다</span>.</p>
             <img class="logo_img" src="./img/logo_test1.png" alt="">
         </div>
         <div class="map_div">
             <div id="map"></div>
+        </div>
+        <div class="slick_div">
+            <div>your content</div>
+            <div>your content</div>
+            <div>your content</div>
         </div>
         <!-- <div class="full_page">
             <div class="main_content">
@@ -38,5 +48,9 @@
         };
         
         var map = new naver.maps.Map('map', mapOptions);
+
+        $(document).ready(()=>{
+            $('.slick_div').slick();
+        });
     </script>
 </html>

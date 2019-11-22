@@ -9,8 +9,8 @@
         <link rel="stylesheet" href="./css/font.css">
         <link rel="stylesheet" href="./css/index.css">
         <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=p7ll3jv67z"></script>
-        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="http://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
     </head>
     <body>
         <div class="slogan_div">
@@ -21,10 +21,19 @@
         <div class="map_div">
             <div id="map"></div>
         </div>
-        <div class="slick_div">
-            <div>your content</div>
-            <div>your content</div>
-            <div>your content</div>
+        <div class="center_cards">
+            <div class="slick_div">
+                <div class="slick_content">1 content</div>
+                <div class="slick_content">2 content</div>
+                <div class="slick_content">3 content</div>
+                <div class="slick_content">4 content</div>
+                <div class="slick_content">5 content</div>
+                <div class="slick_content">6 content</div>
+                <div class="slick_content">7 content</div>
+                <div class="slick_content">8 content</div>
+                <div class="slick_content">9 content</div>
+                <div class="slick_content">10 content</div>
+            </div>
         </div>
         <!-- <div class="full_page">
             <div class="main_content">
@@ -50,7 +59,11 @@
         var map = new naver.maps.Map('map', mapOptions);
 
         $(document).ready(()=>{
-            $('.slick_div').slick();
+            $('.slick_div').slick({
+                infinite: true,
+                slidesToShow:5,
+                slidesToScroll:4
+            });
         });
     </script>
 </html>

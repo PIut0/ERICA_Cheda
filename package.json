@@ -1,0 +1,20 @@
+{
+  "name": "ERICA_Cheda",
+  "version": "1.0.0",
+  "description": "체험을 찾다.<br/>\r 체다",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PIut0/ERICA_Cheda.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PIut0/ERICA_Cheda/issues"
+  },
+  "homepage": "https://github.com/PIut0/ERICA_Cheda#readme"
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Naver Map Test</title>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=p7ll3jv67z"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <div class="test_div">
+        <h1>Naver Map Test</h1>
+        <button id="testbutton">test</button>
+    </div>
+    <div id="map" style="width:70%;height:60vh;"></div>
+</body>
+<script>
+    // basic_left_bottom : 37.4555629, 126.8901483
+    // basic_right_top : 37.4965285, 126.9824899
+    // 싱글벙글 교육센터 : 37.476059, 126.956226
+    // 평생학습관 : 37.482906, 126.922407
+
+    var gwanak = new naver.maps.LatLngBounds(
+        new naver.maps.LatLng(37.4555629, 126.8901483),
+        new naver.maps.LatLng(37.4965285, 126.9824899)
+    );
+    
+    var single = new naver.maps.LatLng(37.476079, 126.956226);
+    var forever = new naver.maps.LatLng(37.482906, 126.922407);
+
+    var mapOptions = {
+        minZoom: 9,
+        maxBounds: gwanak
+    };
+    
+    var map = new naver.maps.Map('map', mapOptions);
+    var single_marker = new naver.maps.Marker({
+        map: map,
+        position: single
+    });
+    var forever_marker = new naver.maps.Marker({
+        map: map,
+        position: forever
+    });
+
+</script>
+</html>

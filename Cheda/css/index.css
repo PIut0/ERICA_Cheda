@@ -65,32 +65,6 @@
 
 .center_cards{
     width: 100%;
-<<<<<<< HEAD
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    background-color: red;
-}
-
-.slick_div{
-    width: 70%;
-    height: 200px;
-    border: 1px solid black;
-}
-
-.slick-arrow{
-
-    /* background-color: black; */
-}
-
-.slick_content{
-    height: 180px;
-    text-align: center;
-    color: black;
-    background: red;
-
-=======
     /* height: 500px; */
     margin-bottom: 100px;
     display: flex;
@@ -139,5 +113,4 @@
 }
 .card1{
     background-color: red;
->>>>>>> a75966a3ded781264f0f433ed483eb39902ca705
 }

@@ -65,6 +65,7 @@
 
 .center_cards{
     width: 100%;
+<<<<<<< HEAD
     height: 500px;
     display: flex;
     justify-content: center;
@@ -89,4 +90,54 @@
     color: black;
     background: red;
 
+=======
+    /* height: 500px; */
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /* background-color: red; */
+}
+
+.slick_div{
+    width: 60vw;
+    /* border: 1px solid black; */
+}
+
+.slick-arrow{
+    
+    /* background-color: black; */
+}
+
+.slick-next, .slick-prev{
+    width: 35px;
+    height: 35px;
+}
+.slick-prev{
+    left: -40px;
+}
+.slick-next{
+    right: -40px;
+}
+.slick-prev::before{
+    color: #fbb03b;
+    font-size: 35px;
+}
+.slick-next::before{
+    color: #fbb03b;
+    font-size: 35px;
+}
+
+.slick_content{
+    height: 17vw;
+    margin: 10px;
+    text-align: center;
+    color: black;
+    border: 1px solid black;
+    border-radius: 4px;
+    /* background: red; */
+}
+.card1{
+    background-color: red;
+>>>>>>> a75966a3ded781264f0f433ed483eb39902ca705
 }

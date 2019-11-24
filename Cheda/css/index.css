@@ -120,12 +120,37 @@
     outline: 0;
 }
 
-.card1 {
-    /* background-color: red; */
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
-
+.card .place_img{
+    display: inline-block;
+    position: relative;
+    width: 70%;
+    height: 56%;
+    background: url(../img/card1.png) center center/150% no-repeat;
+    border-radius: 50%;
+    /* left: 50%;
+    transform: translateX(-50%); */
+}
 .card h1 {
     font-weight: 1000;
     font-family: NanumSquareRoundEB;
-    font-size: 20px;
+    font-size: 1vw;
+}
+.card button{
+    margin-top: -13px;
+    background:none;
+    text-decoration: none;
+    border: 2px solid #fbb03b;
+    border-radius: 3px;
+    color: #fbb03b;
+    font-family: NanumSquareRoundEB;
+    padding: 5px;
+}
+.card button:focus{
+    outline: 0;
 }

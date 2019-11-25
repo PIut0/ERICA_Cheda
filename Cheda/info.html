@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Cheda</title>
+    <!-- Slick.js - Open Source Javascript Framework-->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/info.css">
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=p7ll3jv67z"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <div class="logo"><img src="./img/logo_test1.png" alt=""></div>
+        <div class="container">
+            <h1>
+                싱글벙글 교육센터
+            </h1>
+            <h2>
+                서울 관악구 남부순환로234길 73
+            </h2>
+        </div>
+        
+        <div class="center_cards">
+            <div class="slick_div">
+                <div class="slick_content card card1" style="display: flex;">
+                    <div class="place_img"></div>
+                    <h1>싱글벙글 교육센터</h1>
+                    <button id="btn1">자세히 보기</button>
+                </div>
+                <div class="slick_content card card2">
+                    <div class="place_img"></div>
+                    <h1>관악구 평생학습관</h1>
+                    <button id="btn2">자세히 보기</button>
+                </div>
+                <div class="slick_content card card3">
+                    <div class="place_img"></div>
+                    <h1>낙성대동 주민센터</h1>
+                    <button id="btn3">자세히 보기</button>
+                </div>
+                <div class="slick_content card card4">
+                    <div class="place_img"></div>
+                    <h1>서울대학교</h1>
+                    <button id="btn4">자세히 보기</button>
+                </div>
+                <div class="slick_content card card5">
+                    <div class="place_img"></div>
+                    <h1>미림여자 정보고등학교</h1>
+                    <button id="btn5">자세히 보기</button>
+                </div>
+                <div class="slick_content card card6">
+                    <div class="place_img"></div>
+                    <h1>관악 구민회관</h1>
+                    <button id="btn6">자세히 보기</button>
+                </div>
+                <!-- <div class="slick_content">9 content</div>
+                    <div class="slick_content">10 content</div> -->
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(() => {
+        $('.slick_div').slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 2,
+
+        });
+        $('.card').css("display","flex");
+    });
+</script>
+</html>

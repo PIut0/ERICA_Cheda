@@ -1,1 +1,23 @@
-checking stash
+Num3. django Model&Admin 공부
+
+-------------------------------------------------------------------------------------
+
+database는 django와 별개로 여러개 존재한다.
+
+settings.py에 데이터베이스에 관련된 정보를 입력하고,
+$ python manage.py makemigrations
+$ python manage.py migrate
+// 데이터베이스가 알아듣게끔
+// 실제로 데이터베이스에게 우리가 만든것을 적용하는 것
+
+$ python manage.py createsuperuser
+// admin.py 데이터 등록
+
+1. Models.py 안에 어떤 종류의 데이터를 처리할지 Class로 정의
+2. DB에게 알아듣게끔 하기(makemigrations, migrate 명령어)
+3. Admin 계정 만들기(->admin.py에 활용할 데이터 등록)
+
+즉, 데이터베이스에 어떻게 생긴 데이터를 넣을지 정의하고, 거기에 admin권한으로 데이터 집어넣기
+
+-------------------------------------------------------------------------------------
+

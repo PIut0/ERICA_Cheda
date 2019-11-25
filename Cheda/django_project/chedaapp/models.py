@@ -25,7 +25,8 @@ class Item(models.Model):
     where = models.CharField(max_length=100) #교육장소
 
     to_st_date = models.DateTimeField(auto_now=False, auto_now_add=False) #접수기간_시작
-    to_st_date = models.DateTimeField(auto_now=False, auto_now_add=False) #접수기간_끝
+    
+    to_fin_date = models.DateTimeField(auto_now=False, auto_now_add=False) #접수기간_끝
     
     people=models.IntegerField() #수강정원
 
@@ -34,6 +35,8 @@ class Item(models.Model):
 
     etc=models.TextField(max_length=300) #비고
 
+    def __str__(self):
+        return self.name
 
 
 

@@ -1,7 +1,9 @@
 * {
     margin: 0px;
 }
-
+body{
+    background: #f9f8f5;
+}
 .slogan_div {
     display: flex;
     justify-content: center;
@@ -50,7 +52,7 @@
 .map_div {
     z-index: 11;
     /* background-color: #f1d9c4; */
-    background: white;
+    background: #f9f8f5;
     /* background-color: rgb(255,229,163); */
     padding-bottom: 100px;
     display: flex;
@@ -114,6 +116,7 @@
     background: rgba(255, 196, 80, 0.45);
     background: linear-gradient(180deg, rgba(255, 196, 80, 0.45), rgba(255, 196, 80, 0.15));
     /* border: 1px solid black; */
+    box-shadow: 0px 0px 15px -8px black;
     border-radius: 4px;
     /* background: red; */
 }

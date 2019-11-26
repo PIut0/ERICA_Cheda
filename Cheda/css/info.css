@@ -176,3 +176,43 @@ body{
 .card button:focus{
     outline: 0;
 }
+
+.program_list{
+    margin-top: 70px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    box-shadow: 0px 0px 100px -70px black;
+}
+.program_list .program{
+    background: white;
+    position: relative;
+    width: calc(100% - 200px);
+    height: 200px;
+    padding: 80px 100px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.program_list .program:nth-child(2n){
+    background: red;
+}
+
+.program_list .info_text{
+    position: relative;
+    padding: 20px 0px;
+    text-align: left;
+}
+.program_list .info_text h1{
+    display: inline;
+    font-family: NanumSquareEB;
+}
+.program_list .img_div{
+    position: relative;
+    border-radius: 7px;
+    width: 350px;
+    height: 100%;
+    box-shadow: 0px 0px 50px -20px black;
+}

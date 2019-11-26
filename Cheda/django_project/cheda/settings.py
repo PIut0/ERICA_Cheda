@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'chedaapp', #app 추가
+    'django.contrib.sitemaps', #추가
 ]
 
 MIDDLEWARE = [
@@ -118,3 +120,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# 타임존: 서울 기준으로 바꾸어준다.
+# From UTC on Timezone
+TIME_ZONE = 'UTC'
+# Change into Seoul
+TIME_ZONE = 'Asia/Seoul'
+
+
+TEMPLATE_LOADERS = [ #추가
+    'django.template.loaders.app_directories.load_template_source'
+]
+

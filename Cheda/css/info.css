@@ -189,19 +189,29 @@ body{
 .program_list .program{
     background: white;
     position: relative;
-    width: calc(100% - 200px);
-    height: 200px;
-    padding: 80px 100px;
+    width: calc(100% - 400px);
+    height: 220px;
+    padding: 80px 0px;
+    margin: 0px 200px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
+    border-bottom: 1px dashed #dbdbdb;
+}
+.program_list .program:last-child{
+    border: none;
 }
 .program_list .program:nth-child(2n){
-    background: red;
+    /* background: red; */
 }
 
 .program_list .info_text{
+    font-family: Malgun Gothic;
+    font-family: NanumSquareRoundB;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 20px 0px;
     text-align: left;
 }
@@ -209,6 +219,19 @@ body{
     display: inline;
     font-family: NanumSquareEB;
 }
+.program_list .info_text p{
+    line-height: 150%;
+    color: #444;
+}
+.program_list .info_text span{
+    height: 17px;
+    display: inline-block;
+    border-bottom: 5px solid rgba(251, 176, 59, 0.6);
+    color: black;
+    font-family: NanumSquareRoundEB;
+    margin-right: 25px;
+}
+
 .program_list .img_div{
     position: relative;
     border-radius: 7px;

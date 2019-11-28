@@ -86,6 +86,49 @@
 
     var map = new naver.maps.Map('map', mapOptions);
 
+    var polygon = new naver.maps.Polygon({
+        map: map,
+        paths: [
+            [
+                new naver.maps.LatLng(37.479254, 126.899109),
+                new naver.maps.LatLng(37.484870, 126.903254),
+                new naver.maps.LatLng(37.486516, 126.911762),
+                new naver.maps.LatLng(37.489693, 126.918268),
+                new naver.maps.LatLng(37.489919, 126.924345),
+                new naver.maps.LatLng(37.494571, 126.927206),
+                new naver.maps.LatLng(37.492243, 126.935571),
+                new naver.maps.LatLng(37.492128, 126.944365),
+                new naver.maps.LatLng(37.493943, 126.946105),
+                new naver.maps.LatLng(37.490209, 126.953130),
+                new naver.maps.LatLng(37.493656, 126.960219),
+                new naver.maps.LatLng(37.485481, 126.962000),
+                new naver.maps.LatLng(37.483828, 126.961106),
+                new naver.maps.LatLng(37.482079, 126.962951),
+                new naver.maps.LatLng(37.478913, 126.964259),
+                new naver.maps.LatLng(37.476644, 126.968366),
+                new naver.maps.LatLng(37.468809, 126.969795),
+                new naver.maps.LatLng(37.461864, 126.960089),
+                new naver.maps.LatLng(37.462063, 126.948243),   //snu
+                // new naver.maps.LatLng(37.466779, 126.941456),
+                new naver.maps.LatLng(37.464216, 126.940809),
+                new naver.maps.LatLng(37.458557, 126.928285),
+                new naver.maps.LatLng(37.461271, 126.924286),
+                new naver.maps.LatLng(37.457524, 126.921108),
+                new naver.maps.LatLng(37.459818, 126.915038),
+                new naver.maps.LatLng(37.463833, 126.913978),
+                new naver.maps.LatLng(37.469535, 126.911605),
+                new naver.maps.LatLng(37.474916, 126.912921),
+                new naver.maps.LatLng(37.480919, 126.909805),
+                new naver.maps.LatLng(37.479254, 126.899109)
+            ]
+        ],
+        fillColor: '#fbb03b',
+        fillOpacity: 0,
+        strokeColor: '#fbb03b',
+        strokeOpacity: 0.9,
+        strokeWeight: 6
+    });
+
     $(document).ready(() => {
         $('.slick_div').slick({
             dots: true,

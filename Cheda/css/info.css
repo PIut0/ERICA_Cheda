@@ -185,6 +185,7 @@ body{
     width: 100%;
     background: white;
     box-shadow: 0px 0px 100px -70px black;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .program_list .program{
     position: relative;
@@ -230,10 +231,11 @@ body{
 
 .program_list .img_div{
     position: relative;
-    border-radius: 7px;
+    border-radius: 4px;
     width: 350px;
     height: 100%;
     box-shadow: 0px 0px 50px -20px black;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 17px rgba(0,0,0,0.22);
 }
 .img_div:hover > .view_more{
     opacity: 1;
@@ -245,7 +247,7 @@ body{
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    border-radius: 7px;
+    border-radius: 4px;
     color: white;
     font-family: NanumSquareEB;
     font-size: 30px;

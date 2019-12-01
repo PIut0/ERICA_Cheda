@@ -75,7 +75,10 @@
                 </div>
                 <div class="img_div">
                     <div class="view_more">View More</div>
-                    <div class="info_content"></div>
+                </div>
+                <div class="info_content hidden">
+                    <div class="overlay"></div>
+                    <div class="content_box">111</div>
                 </div>
             </div>
             <div class="program list2">
@@ -89,7 +92,10 @@
                 </div>
                 <div class="img_div">
                     <div class="view_more">View More</div>
-                    <div class="info_content"></div>
+                </div>
+                <div class="info_content hidden">
+                    <div class="overlay"></div>
+                    <div class="content_box">222</div>
                 </div>
             </div>
             <!-- <div class="program list3">
@@ -116,6 +122,32 @@
     </div>
 </body>
 <script>
+
+    const view_more = document.querySelectorAll(".view_more");
+    const info_cont = document.querySelectorAll(".info_content");
+    const overlay = document.querySelectorAll(".overlay");
+    const openInfo = (i) => {
+        console.log(info_cont[i]);
+        info_cont[i].classList.remove("hidden");
+        info_cont[i].classList.add("effect");
+    }
+    const closeInfo = (i) => {
+        console.log(info_cont[i]);
+        info_cont[i].classList.remove("effect");
+        info_cont[i].classList.add("hidden");
+    }
+    view_more.forEach((e,i) => {
+        e.addEventListener("click",()=>{
+            openInfo(i);
+        });
+    });
+    overlay.forEach((e,i) => {
+        e.addEventListener("click",()=>{
+            closeInfo(i);
+        });
+    });
+    // view_more.addEventListener("click", test);
+
     $(document).ready(() => {
         $('.slick_div').slick({
             infinite: true,

@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from chedaapp.views import ItemLV
+from chedaapp.views import ItemLV, NakLV
 
 urlpatterns = [
     path('', ItemLV.as_view(), name='main'),
+    path('nak/', NakLV.as_view(), name='nak'),
     path('admin/', admin.site.urls),
 
 ]

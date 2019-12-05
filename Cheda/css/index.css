@@ -116,17 +116,19 @@ body{
     background: rgba(255, 196, 80, 0.45);
     background: linear-gradient(180deg, rgba(255, 196, 80, 0.45), rgba(255, 196, 80, 0.15));
     /* border: 1px solid black; */
-    box-shadow: 0px 0px 15px -8px black;
+    box-shadow: 0px 0px 15px -8px #ffc450;
     border-radius: 4px;
     /* background: red; */
 }
 .slick_content:nth-child(3n+1){
     background: rgba(255, 176, 100, 0.45);
     background: linear-gradient(180deg, rgba(255, 176, 100, 0.45), rgba(255, 176, 100, 0.15));
+    box-shadow: 0px 0px 15px -8px rgb(255, 176, 100);
 }
 .slick_content:nth-child(3n){
     background: rgba(255, 216, 80, 0.45);
     background: linear-gradient(180deg, rgba(255, 216, 80, 0.45), rgba(255, 216, 80, 0.15));
+    box-shadow: 0px 0px 15px -8px rgb(255, 216, 80);
 }
 
 .slick_content:focus {

@@ -1,0 +1,43 @@
+<!-- According cheda_data.xlsx, Add nakseondae data into DB -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>낙성대동주민센터</title>
+    <style>
+        table{
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #252424;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>낙성대동주민센터</h1>
+
+    <table>
+        <tr>
+            <th>이름</th>
+            <th>수강요일</th>
+            <th colspan="2">교육기간</th>
+
+        </tr>
+        {% for object in object_list %}
+        <tr>
+            <td>{{object.name}}</td>
+            <td>{{object.date}}</td>
+            <td>{{object.st_period}}</td>
+            <td>{{object.fin_period}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

@@ -6,7 +6,7 @@ from django.views.generic import ListView, DetailView
 # from django.views.generic.dates import DayArchiveView, TodayArchiveView
 
 # model import 해오기
-from .models import Item, Nak
+from .models import Item, Nak, Snu
 
 # Create your views here.
 class ItemLV(ListView):
@@ -17,5 +17,9 @@ class ItemLV(ListView):
 class NakLV(ListView):
     model = Nak
     template_name = 'nak.html'
+
+class SnuLV(ListView):
+    model = Snu
+    template_name = 'snu.html'
 
 

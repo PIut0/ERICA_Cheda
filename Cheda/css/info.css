@@ -281,7 +281,7 @@ body{
     padding: 50px 100px;
     text-align: center;
     position: relative;
-    border-radius: 10px;
+    /* border-radius: 4px; */
     width: 600px;
     height: 550px;
     z-index: 100;

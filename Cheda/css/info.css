@@ -193,7 +193,7 @@ body{
     position: relative;
     width: calc(100% - 400px);
     height: 220px;
-    padding: 80px 0px;
+    padding: 55px 0px;
     margin: 0px 200px;
     display: flex;
     justify-content: space-between;

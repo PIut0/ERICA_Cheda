@@ -70,6 +70,7 @@
                     <p>
                         <span class="left">기간</span>2019-09-28 ~ 2019-11-30</br>
                         <span class="left">일시</span>토요일</br>
+                        <span class="left">대상</span>11세 ~ 13세
                     </p>
                 </div>
                 <div class="img_div">
@@ -92,13 +93,13 @@
                     </div>
                 </div>
             </div>
-            <div class="program list2">
+            <div class="program">
                 <div class="info_text">
-                    <h1>도전! 위인탐험대</h1>
+                    <h1>{{object.name}}</h1>
                     <p>
-                        <span class="left">기간</span>2019-10-10 ~ 2019-12-26</br>
-                        <span class="left">일시</span>목요일</br>
-                        <span class="left">대상</span>8세 ~ 10세
+                        <span class="left">기간</span>{{object.st_period}} ~ {{object.fin_period}}</br>
+                        <span class="left">일시</span>{{object.date}}</br>
+                        <span class="left">대상</span>{{object.for_whom}}
                     </p>
                 </div>
                 <div class="img_div">
@@ -106,7 +107,19 @@
                 </div>
                 <div class="info_content hidden">
                     <div class="overlay"></div>
-                    <div class="content_box">222</div>
+                    <div class="content_box">
+                        <h1>{{object.name}}</h1>
+                        <h2>분야 : {{object.l_field}}</h1>
+                        <h2>대상 : {{object.for_whom}}</h1>
+                        <h2>기간 : {{object.st_period}} ~ {{object.fin_period}}</h2>
+                        <h2>일시 : {{object.date}}</h2>
+                        <h2>장소 : {{object.where}}</h2>
+                        <h2>접수기간 : {{object.to_st_date}} ~ {{object.to_fin_date}}</h2>
+                        <h2>정원 : {{object.people}}</h2>
+                        <h2>접수방법 : {{object.how_apply}}</h2>
+                        <h2>문의전화 : {{object.ask}}</h2>
+                        <h2>신청하기 : </h2>
+                    </div>
                 </div>
             </div>
             <!-- <div class="program list3">

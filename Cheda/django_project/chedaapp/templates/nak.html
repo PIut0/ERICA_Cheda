@@ -69,9 +69,9 @@
                 <div class="info_text">
                     <h1>{{object.name}}</h1>
                     <p>
-                        <span class="left">기간</span>2019-09-28 ~ 2019-11-30</br>
-                        <span class="left">일시</span>토요일</br>
-                        <span class="left">대상</span>8세 ~ 10세
+                        <span class="left">기간</span>{{object.st_period}} ~ {{object.fin_period}}</br>
+                        <span class="left">일시</span>{{object.date}}</br>
+                        <span class="left">대상</span>{{object.for_whom}}
                     </p>
                 </div>
                 <div class="img_div">
@@ -80,17 +80,17 @@
                 <div class="info_content hidden">
                     <div class="overlay"></div>
                     <div class="content_box">
-                        <h1>우리동네 기자단</h1>
-                        <h2>분야 : 무료 특강</h1>
-                        <h2>대상 : 11세 ~ 13세</h1>
-                        <h2>기간 : 2019-9-28 ~ 2019-11-30</h2>
-                        <h2>일시 : 토요일 14:00 ~ 16:00</h2>
-                        <h2>장소 : 싱글벙글 교육센터 강의실1</h2>
-                        <h1>접수기간 : </h1>
-                        <h1>정원</h1>
-                        <h1>접수방법</h1>
-                        <h1>문의전화</h1>
-                        <h1>신청하기</h1>
+                        <h1>{{object.name}}</h1>
+                        <h2>분야 : {{object.l_field}}</h1>
+                        <h2>대상 : {{object.for_whom}}</h1>
+                        <h2>기간 : {{object.st_period}} ~ {{object.fin_period}}</h2>
+                        <h2>일시 : {{object.date}}</h2>
+                        <h2>장소 : {{object.where}}</h2>
+                        <h2>접수기간 : {{object.to_st_date}} ~ {{object.to_fin_date}}</h2>
+                        <h2>정원 : {{object.people}}</h2>
+                        <h2>접수방법 : {{object.how_apply}}</h2>
+                        <h2>문의전화 : {{object.ask}}</h2>
+                        <h2>신청하기 : </h2>
                     </div>
                 </div>
             </div>

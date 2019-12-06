@@ -12,7 +12,7 @@ from .models import Item, Nak, Snu
 class ItemLV(ListView):
     # 기본적으로 모든 view를 짤 때, model=Item으로 지정해주어서 어떤 테이블에서 긁어오는지 지정해주어야한다.
     model = Item
-    template_name = 'test_main.html'
+    template_name = 'info.html'
 
 class NakLV(ListView):
     model = Nak

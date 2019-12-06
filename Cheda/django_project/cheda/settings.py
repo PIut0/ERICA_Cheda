@@ -132,3 +132,8 @@ TEMPLATE_LOADERS = [ #추가
     'django.template.loaders.app_directories.load_template_source'
 ]
 
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+) 

@@ -100,6 +100,31 @@
         var mirim_pos = new naver.maps.LatLng(37.466357, 126.932800);   // 미림여자 정보고등학교
         var gumin_pos = new naver.maps.LatLng(37.477086, 126.951059);   // 관악 구민회관
 
+        var sb_marker = new naver.maps.Marker({
+            map: map,
+            position: sb_pos
+        });
+        var forever_marker = new naver.maps.Marker({
+            map: map,
+            position: forever_pos
+        });
+        var nak_marker = new naver.maps.Marker({
+            map: map,
+            position: nak_pos
+        });
+        var snu_marker = new naver.maps.Marker({
+            map: map,
+            position: snu_pos
+        });
+        var mirim_marker = new naver.maps.Marker({
+            map: map,
+            position: mirim_pos
+        });
+        var gumin_marker = new naver.maps.Marker({
+            map: map,
+            position: gumin_pos
+        });
+
         var polygon = new naver.maps.Polygon({
             map: map,
             paths: [

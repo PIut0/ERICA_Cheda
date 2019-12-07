@@ -75,6 +75,13 @@
             </div> -->
     </body>
     <script>
+        // 싱글벙글 교육센터 : 37.476059, 126.956226
+        // 평생학습관 : 37.482906, 126.922407
+        // 낙성대동 주민센터 : 37.476303, 126.958494
+        // 서울대학교 : 37.463893, 126.952220
+        // 미림여자 정보고등학교 : 37.466357, 126.932800
+        // 관악 구민회관 : 37.477086, 126.951059
+
         var gwanak = new naver.maps.LatLngBounds(
             new naver.maps.LatLng(37.4555629, 126.8901483),
             new naver.maps.LatLng(37.4965285, 126.9824899)
@@ -85,6 +92,13 @@
         };
 
         var map = new naver.maps.Map('map', mapOptions);
+
+        var sb_pos = new naver.maps.LatLng(37.476059, 126.956226);      // 싱글벙글 교육센터
+        var forever_pos = new naver.maps.LatLng(37.482906, 126.922407); // 평생학습관
+        var nak_pos = new naver.maps.LatLng(37.476303, 126.958494);     // 낙성대동 주민센터
+        var snu_pos = new naver.maps.LatLng(37.463893, 126.952220);     // 서울대학교
+        var mirim_pos = new naver.maps.LatLng(37.466357, 126.932800);   // 미림여자 정보고등학교
+        var gumin_pos = new naver.maps.LatLng(37.477086, 126.951059);   // 관악 구민회관
 
         var polygon = new naver.maps.Polygon({
             map: map,

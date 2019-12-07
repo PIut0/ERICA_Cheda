@@ -69,7 +69,7 @@
                 <div class="info_text">
                     <h1>{{object.name}}</h1>
                     <p>
-                        <span class="left">기간</span>{{object.st_period}} ~ {{object.fin_period}}</br>
+                        <span class="left">기간</span>{{object.st_period | date:'Y년 m월 d일'}} ~ {{object.fin_period | date:'m월 d일'}}</br>
                         <span class="left">일시</span>{{object.date}}</br>
                         <span class="left">대상</span>{{object.for_whom}}
                     </p>
@@ -83,7 +83,7 @@
                         <h1>{{object.name}}</h1>
                         <h2>분야 : {{object.l_field}}</h1>
                         <h2>대상 : {{object.for_whom}}</h1>
-                        <h2>기간 : {{object.st_period}} ~ {{object.fin_period}}</h2>
+                        <h2>기간 : {{object.st_period | date:'Y년 m월 d일'}} ~ {{object.fin_period | date:'m월 d일'}}</h2>
                         <h2>일시 : {{object.date}}</h2>
                         <h2>장소 : {{object.where}}</h2>
                         <h2>접수기간 : {{object.to_st_date}} ~ {{object.to_fin_date}}</h2>

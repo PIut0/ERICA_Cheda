@@ -149,11 +149,28 @@ body{
     border-radius: 50%;
     /* left: 50%;
     transform: translateX(-50%); */
-    background: url(../img/card1.png) center center/150% no-repeat;
+    background: url(../img/centers/sb_img.png) center center/150% no-repeat;
 }
 .card1 .place_img{
-    background: url(../img/card1.png) center center/150% no-repeat;
+    background: url(../img/centers/sb_img.png) center center/150% no-repeat;
 }
+.card2 .place_img{
+    background: url(../img/centers/forever_img.png) left center/140% no-repeat;
+}
+.card3 .place_img{
+    background: url(../img/centers/nak_img.png) left top/150% no-repeat;
+}
+.card4 .place_img{
+    background: url(../img/centers/snu_img.png) right center/140% no-repeat;
+}
+.card5 .place_img{
+    background: url(../img/centers/mirim_img.png) center center/135% no-repeat;
+}
+.card6 .place_img{
+    background: url(../img/centers/gumin_img.png) center center/130% no-repeat;
+}
+
+
 .card h1 {
     font-weight: 1000;
     font-family: NanumSquareRoundEB;

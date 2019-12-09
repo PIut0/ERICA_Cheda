@@ -295,14 +295,29 @@ body{
 }
 .info_content .content_box{
     background-color: white;
-    padding: 50px 100px;
-    text-align: center;
+    padding: 50px;
+    /* text-align: center; */
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
     /* border-radius: 4px; */
     width: 600px;
     height: 550px;
     z-index: 100;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.content_box h1{
+    font-family: NanumSquareEB;
+    font-size: 45px;
+    border-bottom: 12px solid #fbb03b;
+    /* padding-bottom: 20px; */
+    height: 40px;
+    margin-bottom: 20px;
+}
+.content_box h2{
+    text-align: left;
 }
 
 

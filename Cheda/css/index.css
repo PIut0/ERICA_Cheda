@@ -195,3 +195,10 @@ body{
 .card button:focus{
     outline: 0;
 }
+
+.slick-dots li button::before{
+    color: #fbb03b;
+}
+.slick-dots li.slick-active button::before{
+    color: #fbb03b;
+}

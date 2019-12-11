@@ -315,6 +315,7 @@ body{
     /* padding-bottom: 20px; */
     height: 40px;
     margin-bottom: 20px;
+    color: #222;
 }
 .content_box h2{
     text-align: left;
@@ -345,12 +346,17 @@ body{
     font-family: NanumSquareEB;
     padding: 15px 30px;
     background: none;
-    color: #e0a13c;
+    color: #fbb03b;
     border: 5px solid #fbb03b;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 35px;
+    transition: color,background 0.35s;
+}
+.apply_box button:hover{
+    color: white;
+    background: #fbb03b;
 }
 
 .hidden{

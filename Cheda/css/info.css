@@ -303,8 +303,8 @@ body{
     justify-content: left;
     align-items: flex-start;
     /* border-radius: 4px; */
-    width: 600px;
-    height: 550px;
+    width: 500px;
+    height: 450px;
     z-index: 100;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
@@ -347,6 +347,10 @@ body{
     background: none;
     color: #e0a13c;
     border: 5px solid #fbb03b;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 35px;
 }
 
 .hidden{

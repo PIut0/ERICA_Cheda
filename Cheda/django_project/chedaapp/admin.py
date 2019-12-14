@@ -27,5 +27,3 @@ class GuminAdmin(admin.ModelAdmin):
     list_display_links = ['id', 'name']
 admin.site.register(Gumin, GuminAdmin)
 
-
-admin.site.register(Item)

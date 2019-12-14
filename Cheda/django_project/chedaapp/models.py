@@ -194,7 +194,7 @@ class Sb(models.Model):
     people=models.IntegerField() #수강정원
     how_apply = models.CharField(max_length = 50) #접수방법
     ask=models.CharField(max_length=50) #문의전화
-    etc=models.TextField(null=True, blank=True) #비고
+    etc=models.TextField(null=True, blank=True) #비고(신청링크)
 
     def __str__(self):
         return self.name

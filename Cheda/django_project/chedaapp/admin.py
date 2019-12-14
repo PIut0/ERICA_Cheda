@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Item, Nak, Snu, Mirim, Forever
+from .models import Item, Nak, Snu, Mirim, Forever, Gumin
 # Register your models here.
 
 class NakAdmin(admin.ModelAdmin):
@@ -21,5 +21,11 @@ class ForeverAdmin(admin.ModelAdmin):
     list_display = ['id', 'name', 'date','st_period', 'fin_period' ]
     list_display_links = ['id', 'name']
 admin.site.register(Forever, ForeverAdmin)
+
+class GuminAdmin(admin.ModelAdmin):
+    list_display = ['id', 'name', 'date','st_period', 'fin_period' ]
+    list_display_links = ['id', 'name']
+admin.site.register(Gumin, GuminAdmin)
+
 
 admin.site.register(Item)

@@ -35,7 +35,7 @@
                     <button id="btn1">자세히 보기</button>
                 </div>
                 <div class="slick_content card card2">
-                    <div class="place_img"></div>
+                    <div class="place_img" ></div>
                     <h1>관악구 평생학습관</h1>
                     <button id="btn2">자세히 보기</button>
                 </div>
@@ -66,7 +66,7 @@
         <div class="program_list">
             {% for object in object_list %}
             <div class="program">
-                <div class="info_text">
+                <div class="info_text {{object.id}}">
                     <h1>{{object.name}}</h1>
                     <p>
                         <span class="left">기간</span>{{object.st_period | date:'Y년 m월 d일'}} ~ {{object.fin_period | date:'m월 d일'}}</br>

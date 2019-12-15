@@ -157,6 +157,13 @@
             '   <button id="btn3" onclick="location.href=`./info.html`">자세히 보기</button>',
             '</div>'
         ].join('');
+        var gumin_map_content = [
+            '<div class="map_content" style="padding:14px;">',
+            '   <h3>관악 구민회관</h3>',
+            '   <p>서울 관악구 관악로5길 95 | 봉천동 1589-13</p>',
+            '   <button id="btn3" onclick="location.href=`./info.html`">자세히 보기</button>',
+            '</div>'
+        ].join('');
 
 
         var sb_infowindow = new naver.maps.InfoWindow({
@@ -193,6 +200,14 @@
         });
         var mirim_infowindow = new naver.maps.InfoWindow({
             content: mirim_map_content,
+            backgroundColor: "white",
+            borderColor: "#fbb03b",
+            borderWidth: 3,
+            anchorSize: new naver.maps.Size(10, 5),
+            pixelOffset: new naver.maps.Point(0, -10)
+        });
+        var gumin_infowindow = new naver.maps.InfoWindow({
+            content: gumin_map_content,
             backgroundColor: "white",
             borderColor: "#fbb03b",
             borderWidth: 3,
@@ -238,6 +253,14 @@
             }
             else{
                 mirim_infowindow.open(map, mirim_marker);
+            }
+        });
+        naver.maps.Event.addListener(gumin_marker, "click", (e) => {
+            if(gumin_infowindow.getMap()){
+                gumin_infowindow.close();
+            }
+            else{
+                gumin_infowindow.open(map, gumin_marker);
             }
         });
 

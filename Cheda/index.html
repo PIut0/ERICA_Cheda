@@ -130,9 +130,25 @@
             '</div>'
         ].join('');
 
+        var forever_map_content = [
+            '<div class="map_content" style="padding:14px;">',
+            '   <h3>관악구 평생학습관</h3>',
+            '   <p>서울 관악구 남부순환로 1546 관악구평생학습센터 | 신림동 1577-4</p>',
+            '   <button id="btn3" onclick="location.href=`./info.html`">자세히 보기</button>',
+            '</div>'
+        ].join('');
+
 
         var sb_infowindow = new naver.maps.InfoWindow({
             content: sb_map_content,
+            backgroundColor: "white",
+            borderColor: "#fbb03b",
+            borderWidth: 3,
+            anchorSize: new naver.maps.Size(10, 5),
+            pixelOffset: new naver.maps.Point(0, -10)
+        });
+        var forever_infowindow = new naver.maps.InfoWindow({
+            content: forever_map_content,
             backgroundColor: "white",
             borderColor: "#fbb03b",
             borderWidth: 3,
@@ -146,6 +162,14 @@
             }
             else{
                 sb_infowindow.open(map, sb_marker);
+            }
+        });
+        naver.maps.Event.addListener(forever_marker, "click", (e) => {
+            if(forever_infowindow.getMap()){
+                forever_infowindow.close();
+            }
+            else{
+                forever_infowindow.open(map, forever_marker);
             }
         });
 

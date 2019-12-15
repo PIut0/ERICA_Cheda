@@ -264,25 +264,22 @@
             }
         });
 
+        function move(pos,dur,info,marker){
+            setTimeout(map.setZoom(12,true), dur);
+            map.panTo(pos);
+            setTimeout(() => {
+                if(!info.getMap()){
+                    info.open(map,marker);
+                }
+            },dur);
+        }
         $('.card1').on("click",function(e){
             e.preventDefault();
-            setTimeout(map.setZoom(12,true), 300);
-            map.panTo(sb_pos);
-            setTimeout(() => {
-                if(!sb_infowindow.getMap()){
-                    sb_infowindow.open(map,sb_marker);
-                }
-            },300);
+            move(sb_pos,300,sb_infowindow,sb_marker);
         });
         $('.card2').on("click",function(e){
             e.preventDefault();
-            setTimeout(map.setZoom(12,true), 300);
-            map.panTo(forever_pos);
-            setTimeout(() => {
-                if(!forever_infowindow.getMap()){
-                    forever_infowindow.open(map,forever_marker);
-                }
-            },300);
+            move(forever_pos,300,forever_infowindow,forever_marker);
         });
 
         // sb_infowindow.open(map, sb_marker);

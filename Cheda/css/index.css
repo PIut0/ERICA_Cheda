@@ -170,7 +170,6 @@ body{
     background: url(../img/centers/gumin_img.png) center center/130% no-repeat;
 }
 
-
 .card h1 {
     font-weight: 1000;
     font-family: NanumSquareRoundEB;
@@ -201,4 +200,21 @@ body{
 }
 .slick-dots li.slick-active button::before{
     color: #fbb03b;
+}
+
+.map_content button{
+    margin-top: -13px;
+    background:none;
+    text-decoration: none;
+    border: 2px solid #fbb03b;
+    border-radius: 3px;
+    background-color: #fff;
+    color: #fbb03b;
+    font-family: NanumSquareRoundEB;
+    padding: 5px;
+    transition: background 0.15s;
+}
+.map_content button:hover{
+    background: #fbb03b;
+    color: #fff;
 }

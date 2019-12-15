@@ -274,6 +274,16 @@
                 }
             },300);
         });
+        $('.card2').on("click",function(e){
+            e.preventDefault();
+            setTimeout(map.setZoom(12,true), 300);
+            map.panTo(forever_pos);
+            setTimeout(() => {
+                if(!forever_infowindow.getMap()){
+                    forever_infowindow.open(map,forever_marker);
+                }
+            },300);
+        });
 
         // sb_infowindow.open(map, sb_marker);
 

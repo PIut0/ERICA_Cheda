@@ -264,6 +264,17 @@
             }
         });
 
+        $('.card1').on("click",function(e){
+            e.preventDefault();
+            setTimeout(map.setZoom(12,true), 300);
+            map.panTo(sb_pos);
+            setTimeout(() => {
+                if(!sb_infowindow.getMap()){
+                    sb_infowindow.open(map,sb_marker);
+                }
+            },300);
+        });
+
         // sb_infowindow.open(map, sb_marker);
 
         var polygon = new naver.maps.Polygon({

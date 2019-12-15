@@ -65,7 +65,39 @@
         </div>
         <div class="program_list">
             {% for object in object_list %}
+            
             <div class="program">
+                <div class="info_text">
+                    <h1>{{object.name}}</h1>
+                    <p>
+                        <span class="left">기간</span>{{object.st_period | date:'Y년 m월 d일'}} ~ {{object.fin_period | date:'m월 d일'}}</br>
+                        <span class="left">일시</span>{{object.date}}</br>
+                        <span class="left">대상</span>{{object.for_whom}}
+                    </p>
+                </div>
+                <div class="img_div" style="background:url(../static/img/centers/nak/{{object.id}}.jpg) center center/100% no-repeat;">
+                    <div class="view_more">View More</div>
+                </div>
+                <div class="info_content hidden">
+                    <div class="overlay"></div>
+                    <div class="content_box">
+                        <h1>{{object.name}}</h1>
+                        <h2><span>분야</span>{{object.l_field}}</h1>
+                        <h2><span>대상</span>{{object.for_whom}}</h1>
+                        <h2><span>기간</span>{{object.st_period | date:'Y년 m월 d일'}} ~ {{object.fin_period | date:'m월 d일'}}</h2>
+                        <h2><span>일시</span>{{object.date}}</h2>
+                        <h2><span>장소</span>{{object.where}}</h2>
+                        <div class="apply_box"></br>
+                            <h2>접수기간 : {{object.to_st_date | date:'Y년 m월 d일 H:i'}} ~ {{object.to_fin_date | date:'m월 d일 H:i'}}</h2>
+                            <h2>인원제한 : {{object.people}}명</h2>
+                            <h2>접수방법 : {{object.how_apply}}</h2>
+                            <h2>문의전화 : {{object.ask}}</h2>
+                            <button>신청하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="program">
                 <div class="info_text {{object.id}}">
                     <h1>{{object.name}}</h1>
                     <p>
@@ -74,7 +106,7 @@
                         <span class="left">대상</span>{{object.for_whom}}
                     </p>
                 </div>
-                <div class="img_div">
+                <div class="img_div" style="background:url(../static/img/centers/nak/{{object.id}}.jpg) center center/100% no-repeat;">
                     <div class="view_more">View More</div>
                 </div>
                 <div class="info_content hidden">
@@ -93,7 +125,7 @@
                         <h2>신청하기 : </h2>
                     </div>
                 </div>
-            </div>
+            </div> -->
             {% endfor %}
         </div>
     </div>

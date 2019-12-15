@@ -253,6 +253,9 @@ body{
     height: 100%;
     box-shadow: 0px 0px 50px -20px black;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 17px rgba(0,0,0,0.22);
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 .img_div:hover > .view_more{
     opacity: 1;

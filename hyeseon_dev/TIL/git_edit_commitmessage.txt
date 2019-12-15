@@ -1,0 +1,4 @@
+방금 commit한 커밋메세지를 수정하고 싶다!!
+
+$ git commit --amend -m "바꿀내용"
+$ git push -f

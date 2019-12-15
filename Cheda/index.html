@@ -122,6 +122,35 @@
             position: gumin_pos
         });
 
+        var sb_map_content = [
+            '<div class="map_content" style="padding:14px;">',
+            '   <h3>싱글벙글 교육센터</h3>',
+            '   <p>서울 관악구 남부순환로234길 73 | 봉천동 산56-3</p>',
+            '   <button id="btn3" onclick="location.href=`./info.html`">자세히 보기</button>',
+            '</div>'
+        ].join('');
+
+
+        var sb_infowindow = new naver.maps.InfoWindow({
+            content: sb_map_content,
+            backgroundColor: "white",
+            borderColor: "#fbb03b",
+            borderWidth: 3,
+            anchorSize: new naver.maps.Size(10, 5),
+            pixelOffset: new naver.maps.Point(0, -10)
+        });
+        
+        naver.maps.Event.addListener(sb_marker, "click", (e) => {
+            if(sb_infowindow.getMap()){
+                sb_infowindow.close();
+            }
+            else{
+                sb_infowindow.open(map, sb_marker);
+            }
+        });
+
+        // sb_infowindow.open(map, sb_marker);
+
         var polygon = new naver.maps.Polygon({
             map: map,
             paths: [
@@ -159,7 +188,7 @@
                 ]
             ],
             fillColor: '#fb6c3b',
-            fillOpacity: 0.075,
+            fillOpacity: 0.045,
             strokeColor: '#fb6c3b',
             strokeOpacity: 0.9,
             strokeWeight: 6

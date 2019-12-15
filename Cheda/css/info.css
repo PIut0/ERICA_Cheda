@@ -352,7 +352,7 @@ body{
     left: 50%;
     transform: translateX(-50%);
     margin-top: 35px;
-    transition: color,background 0.35s;
+    transition: all 0.35s;
 }
 .apply_box button:hover{
     color: white;

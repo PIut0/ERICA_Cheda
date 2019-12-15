@@ -129,11 +129,17 @@
             '   <button id="btn3" onclick="location.href=`./info.html`">자세히 보기</button>',
             '</div>'
         ].join('');
-
         var forever_map_content = [
             '<div class="map_content" style="padding:14px;">',
             '   <h3>관악구 평생학습관</h3>',
             '   <p>서울 관악구 남부순환로 1546 관악구평생학습센터 | 신림동 1577-4</p>',
+            '   <button id="btn3" onclick="location.href=`./info.html`">자세히 보기</button>',
+            '</div>'
+        ].join('');
+        var nak_map_content = [
+            '<div class="map_content" style="padding:14px;">',
+            '   <h3>낙성대동 주민센터</h3>',
+            '   <p>서울 관악구 낙성대로4가길 5 낙성대동주민센터 | 봉천동 1624-24</p>',
             '   <button id="btn3" onclick="location.href=`./info.html`">자세히 보기</button>',
             '</div>'
         ].join('');
@@ -155,6 +161,14 @@
             anchorSize: new naver.maps.Size(10, 5),
             pixelOffset: new naver.maps.Point(0, -10)
         });
+        var nak_infowindow = new naver.maps.InfoWindow({
+            content: nak_map_content,
+            backgroundColor: "white",
+            borderColor: "#fbb03b",
+            borderWidth: 3,
+            anchorSize: new naver.maps.Size(10, 5),
+            pixelOffset: new naver.maps.Point(0, -10)
+        });
         
         naver.maps.Event.addListener(sb_marker, "click", (e) => {
             if(sb_infowindow.getMap()){
@@ -170,6 +184,14 @@
             }
             else{
                 forever_infowindow.open(map, forever_marker);
+            }
+        });
+        naver.maps.Event.addListener(nak_marker, "click", (e) => {
+            if(nak_infowindow.getMap()){
+                nak_infowindow.close();
+            }
+            else{
+                nak_infowindow.open(map, nak_marker);
             }
         });
 

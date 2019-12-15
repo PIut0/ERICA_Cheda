@@ -150,6 +150,13 @@
             '   <button id="btn3" onclick="location.href=`./info.html`">자세히 보기</button>',
             '</div>'
         ].join('');
+        var mirim_map_content = [
+            '<div class="map_content" style="padding:14px;">',
+            '   <h3>미림여자 정보고등학교</h3>',
+            '   <p>서울 관악구 호암로 546 | 신림동 1557-1</p>',
+            '   <button id="btn3" onclick="location.href=`./info.html`">자세히 보기</button>',
+            '</div>'
+        ].join('');
 
 
         var sb_infowindow = new naver.maps.InfoWindow({
@@ -178,6 +185,14 @@
         });
         var snu_infowindow = new naver.maps.InfoWindow({
             content: snu_map_content,
+            backgroundColor: "white",
+            borderColor: "#fbb03b",
+            borderWidth: 3,
+            anchorSize: new naver.maps.Size(10, 5),
+            pixelOffset: new naver.maps.Point(0, -10)
+        });
+        var mirim_infowindow = new naver.maps.InfoWindow({
+            content: mirim_map_content,
             backgroundColor: "white",
             borderColor: "#fbb03b",
             borderWidth: 3,
@@ -215,6 +230,14 @@
             }
             else{
                 snu_infowindow.open(map, snu_marker);
+            }
+        });
+        naver.maps.Event.addListener(mirim_marker, "click", (e) => {
+            if(mirim_infowindow.getMap()){
+                mirim_infowindow.close();
+            }
+            else{
+                mirim_infowindow.open(map, mirim_marker);
             }
         });
 

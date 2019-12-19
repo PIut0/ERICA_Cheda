@@ -79,13 +79,16 @@
         // 미림여자 정보고등학교 : 37.466357, 126.932800
         // 관악 구민회관 : 37.477086, 126.951059
 
-        var gwanak = new naver.maps.LatLngBounds(
-            new naver.maps.LatLng(37.4555629, 126.8901483),
-            new naver.maps.LatLng(37.4965285, 126.9824899)
-        );
+        // var gwanak = new naver.maps.LatLngBounds(
+        //     new naver.maps.LatLng(37.4555629, 126.8901483),
+        //     new naver.maps.LatLng(37.4965285, 126.9824899)
+        // );
         var mapOptions = {
-            minZoom: 9,
-            maxBounds: gwanak
+            useStyleMap: true,
+            minZoom: 14,
+            // maxBounds: gwanak,
+            center: naver.maps.LatLng(37.476698, 126.937292),
+            zoom: 14,
         };
 
         var map = new naver.maps.Map('map', mapOptions);
@@ -265,7 +268,7 @@
         });
 
         function move(pos,dur,info,marker){
-            setTimeout(map.setZoom(12,true), dur);
+            setTimeout(map.setZoom(17,true), dur);
             map.panTo(pos);
             setTimeout(() => {
                 if(!info.getMap()){

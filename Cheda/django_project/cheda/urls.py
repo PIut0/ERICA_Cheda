@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from chedaapp.views import ItemLV, NakLV, SnuLV, MirimLV, ForeverLV, GuminLV
+from chedaapp.views import ItemLV, NakLV, SnuLV, MirimLV, ForeverLV, GuminLV, SbLV
 
 urlpatterns = [
     path('', ItemLV.as_view(), name='main'),
@@ -24,6 +24,7 @@ urlpatterns = [
     path('mirim/', MirimLV.as_view(), name='mirim'),
     path('forever/', ForeverLV.as_view(), name='forever'),
     path('gumin/', GuminLV.as_view(), name='gumin'),
+    path('sb/', SbLV.as_view(), name='gumin'),
     path('admin/', admin.site.urls),
     
 

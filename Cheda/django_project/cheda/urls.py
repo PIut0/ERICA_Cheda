@@ -24,7 +24,7 @@ urlpatterns = [
     path('mirim/', MirimLV.as_view(), name='mirim'),
     path('forever/', ForeverLV.as_view(), name='forever'),
     path('gumin/', GuminLV.as_view(), name='gumin'),
-    path('sb/', SbLV.as_view(), name='gumin'),
+    path('sb/', SbLV.as_view(), name='sb'),
     path('admin/', admin.site.urls),
     
 

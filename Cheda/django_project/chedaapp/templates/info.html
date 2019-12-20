@@ -1,181 +1,363 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8" />
-    <title>Cheda</title>
-    <!-- Slick.js - Open Source Javascript Framework-->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
-    <link rel="stylesheet" href="../static/css/font.css">
-    <link rel="stylesheet" href="../static/css/info.css">
-    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=p7ll3jv67z"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript" src="http://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
-</head>
+    <head>
+        <meta charset="utf-8" />
+        <title>Cheda</title>
+        <!-- Slick.js - Open Source Javascript Framework-->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+        <link rel="stylesheet" href="../static/css/font.css">
+        <link rel="stylesheet" href="../static/css/index.css">
+        <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=p7ll3jv67z"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="http://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+    </head>
 
-<body>
-    <div class="content">
-        <div class="logo"><img src="../static/img/logo_test1.png" onclick="location.href='./index.html'" alt=""></div>
-        <div class="container">
+    <body>
+        <div class="slogan_div">
             <div class="img_cover"></div>
-            <h1>
-                싱글벙글 교육센터
-            </h1>
-            <h2>
-                서울 관악구 남부순환로234길 73 &nbsp;| &nbsp;서울 관악구 봉천동 산56-3
-            </h2>
+            <p class="slogan">일상속 <span>체</span>험을 찾<span>다</span></p>
+            <img class="logo_img" src="../static/img/logo_test1.png" alt="">
         </div>
-        
+        <div class="map_div">
+            <div id="map"></div>
+        </div>
         <div class="center_cards">
             <div class="slick_div">
                 <div class="slick_content card card1" style="display: flex;">
                     <div class="place_img"></div>
                     <h1>싱글벙글 교육센터</h1>
-                    <button id="btn1">자세히 보기</button>
+                    <button id="btn1" onclick="location.href='./info.html'">자세히 보기</button>
                 </div>
                 <div class="slick_content card card2">
                     <div class="place_img"></div>
                     <h1>관악구 평생학습관</h1>
-                    <button id="btn2">자세히 보기</button>
+                    <button id="btn2" onclick="location.href='./info.html'">자세히 보기</button>
                 </div>
                 <div class="slick_content card card3">
                     <div class="place_img"></div>
                     <h1>낙성대동 주민센터</h1>
-                    <button id="btn3">자세히 보기</button>
+                    <button id="btn3" onclick="location.href='./info.html'">자세히 보기</button>
                 </div>
                 <div class="slick_content card card4">
                     <div class="place_img"></div>
                     <h1>서울대학교</h1>
-                    <button id="btn4">자세히 보기</button>
+                    <button id="btn4" onclick="location.href='./info.html'">자세히 보기</button>
                 </div>
                 <div class="slick_content card card5">
                     <div class="place_img"></div>
                     <h1>미림여자 정보고등학교</h1>
-                    <button id="btn5">자세히 보기</button>
+                    <button id="btn5" onclick="location.href='./info.html'">자세히 보기</button>
                 </div>
                 <div class="slick_content card card6">
                     <div class="place_img"></div>
                     <h1>관악 구민회관</h1>
-                    <button id="btn6">자세히 보기</button>
+                    <button id="btn6" onclick="location.href='./info.html'">자세히 보기</button>
                 </div>
                 <!-- <div class="slick_content">9 content</div>
                     <div class="slick_content">10 content</div> -->
             </div>
         </div>
-        <div class="program_list">
-            {% for object in object_list %}
-            <div class="program list1">
-                <div class="info_text">
-                    <h1>우리동네 기자단</h1>
-                    <p>
-                        <span class="left">기간</span>2019-09-28 ~ 2019-11-30</br>
-                        <span class="left">일시</span>토요일</br>
-                    </p>
-                </div>
-                <div class="img_div">
-                    <div class="view_more">View More</div>
-                </div>
-                <div class="info_content hidden">
-                    <div class="overlay"></div>
-                    <div class="content_box">
-                        <h1>우리동네 기자단</h1>
-                        <h2>분야 : 무료 특강</h1>
-                        <h2>대상 : 11세 ~ 13세</h1>
-                        <h2>기간 : 2019-9-28 ~ 2019-11-30</h1>
-                        <h2>일시 : 토요일 14:00 ~ 16:00</h1>
-                            <h2>장소 : 싱글벙글 교육센터 강의실1</h1>
-                                <h1>접수기간 : </h1>
-                                <h1>정원</h1>
-                        <h1>접수방법</h1>
-                        <h1>문의전화</h1>
-                        <h1>신청하기</h1>
+        <!-- <div class="full_page">
+                <div class="main_content">z
+                    <div class="logo">
+                        <img class="logo_img" src="../static/img/logo_test.png" alt="">
+                    </div>
+                    <div class="map">
+                        <img src="../static/img/map_example.png" alt="">
                     </div>
                 </div>
-            </div>
-            {% endfor %}
-            <div class="program list2">
-                <div class="info_text">
-                    <h1>도전! 위인탐험대</h1>
-                    <p>
-                        <span class="left">기간</span>2019-10-10 ~ 2019-12-26</br>
-                        <span class="left">일시</span>목요일</br>
-                        <span class="left">대상</span>8세 ~ 10세
-                    </p>
-                </div>
-                <div class="img_div">
-                    <div class="view_more">View More</div>
-                </div>
-                <div class="info_content hidden">
-                    <div class="overlay"></div>
-                    <div class="content_box">222</div>
-                </div>
-            </div>
-            <!-- <div class="program list3">
-                <div class="info_text"></div>
-                <div class="img_div"></div>
-            </div>
-            <div class="program list4">
-                <div class="info_text"></div>
-                <div class="img_div"></div>
-            </div>
-            <div class="program list5">
-                <div class="info_text"></div>
-                <div class="img_div"></div>
-            </div>
-            <div class="program list6">
-                <div class="info_text"></div>
-                <div class="img_div"></div>
-            </div>
-            <div class="program list7">
-                <div class="info_text"></div>
-                <div class="img_div"></div>
+                test
             </div> -->
-        </div>
-    </div>
-    {% for object in object_list %}
-    <tr>
-        <td>{{object.name}}</td>
-        <td>{{object.date}}</td>
-        <td>{{object.st_period}}</td>
-        <td>{{object.fin_period}}</td>
-    </tr>
-    {% endfor %}
-</body>
-<script>
+    </body>
+    <script>
+        // 싱글벙글 교육센터 : 37.476059, 126.956226
+        // 평생학습관 : 37.482906, 126.922407
+        // 낙성대동 주민센터 : 37.476303, 126.958494
+        // 서울대학교 : 37.463893, 126.952220
+        // 미림여자 정보고등학교 : 37.466357, 126.932800
+        // 관악 구민회관 : 37.477086, 126.951059
 
-    const view_more = document.querySelectorAll(".view_more");
-    const info_cont = document.querySelectorAll(".info_content");
-    const overlay = document.querySelectorAll(".overlay");
-    const openInfo = (i) => {
-        console.log(info_cont[i]);
-        info_cont[i].classList.remove("hidden");
-        info_cont[i].classList.add("effect");
-    }
-    const closeInfo = (i) => {
-        console.log(info_cont[i]);
-        info_cont[i].classList.remove("effect");
-        info_cont[i].classList.add("hidden");
-    }
-    view_more.forEach((e,i) => {
-        e.addEventListener("click",()=>{
-            openInfo(i);
-        });
-    });
-    overlay.forEach((e,i) => {
-        e.addEventListener("click",()=>{
-            closeInfo(i);
-        });
-    });
-    // view_more.addEventListener("click", test);
+        // var gwanak = new naver.maps.LatLngBounds(
+        //     new naver.maps.LatLng(37.4555629, 126.8901483),
+        //     new naver.maps.LatLng(37.4965285, 126.9824899)
+        // );
+        var mapOptions = {
+            useStyleMap: true,
+            minZoom: 14,
+            // maxBounds: gwanak,
+            center: naver.maps.LatLng(37.476698, 126.937292),
+            zoom: 14,
+        };
 
-    $(document).ready(() => {
-        $('.slick_div').slick({
-            infinite: true,
-            slidesToShow: 4,
-            slidesToScroll: 2,
+        var map = new naver.maps.Map('map', mapOptions);
+
+        var sb_pos = new naver.maps.LatLng(37.476059, 126.956226);      // 싱글벙글 교육센터
+        var forever_pos = new naver.maps.LatLng(37.482906, 126.922407); // 평생학습관
+        var nak_pos = new naver.maps.LatLng(37.476303, 126.958494);     // 낙성대동 주민센터
+        var snu_pos = new naver.maps.LatLng(37.463893, 126.952220);     // 서울대학교
+        var mirim_pos = new naver.maps.LatLng(37.466357, 126.932800);   // 미림여자 정보고등학교
+        var gumin_pos = new naver.maps.LatLng(37.477086, 126.951059);   // 관악 구민회관
+
+        var sb_marker = new naver.maps.Marker({
+            map: map,
+            position: sb_pos
         });
-        $('.card').css("display","flex");
-    });
-</script>
+        var forever_marker = new naver.maps.Marker({
+            map: map,
+            position: forever_pos
+        });
+        var nak_marker = new naver.maps.Marker({
+            map: map,
+            position: nak_pos
+        });
+        var snu_marker = new naver.maps.Marker({
+            map: map,
+            position: snu_pos
+        });
+        var mirim_marker = new naver.maps.Marker({
+            map: map,
+            position: mirim_pos
+        });
+        var gumin_marker = new naver.maps.Marker({
+            map: map,
+            position: gumin_pos
+        });
+
+        var sb_map_content = [
+            '<div class="map_content" style="padding:14px;">',
+            '   <h3>싱글벙글 교육센터</h3>',
+            '   <p>서울 관악구 남부순환로234길 73 | 봉천동 산56-3</p>',
+            '   <button id="btn3" onclick="location.href=`./info.html`">자세히 보기</button>',
+            '</div>'
+        ].join('');
+        var forever_map_content = [
+            '<div class="map_content" style="padding:14px;">',
+            '   <h3>관악구 평생학습관</h3>',
+            '   <p>서울 관악구 남부순환로 1546 | 신림동 1577-4</p>',
+            '   <button id="btn3" onclick="location.href=`./info.html`">자세히 보기</button>',
+            '</div>'
+        ].join('');
+        var nak_map_content = [
+            '<div class="map_content" style="padding:14px;">',
+            '   <h3>낙성대동 주민센터</h3>',
+            '   <p>서울 관악구 낙성대로4가길 5 | 봉천동 1624-24</p>',
+            '   <button id="btn3" onclick="location.href=`./info.html`">자세히 보기</button>',
+            '</div>'
+        ].join('');
+        var snu_map_content = [
+            '<div class="map_content" style="padding:14px;">',
+            '   <h3>서울대학교</h3>',
+            '   <p>서울 관악구 관악로 1 | 신림동 산56-1</p>',
+            '   <button id="btn3" onclick="location.href=`./info.html`">자세히 보기</button>',
+            '</div>'
+        ].join('');
+        var mirim_map_content = [
+            '<div class="map_content" style="padding:14px;">',
+            '   <h3>미림여자 정보고등학교</h3>',
+            '   <p>서울 관악구 호암로 546 | 신림동 1557-1</p>',
+            '   <button id="btn3" onclick="location.href=`./info.html`">자세히 보기</button>',
+            '</div>'
+        ].join('');
+        var gumin_map_content = [
+            '<div class="map_content" style="padding:14px;">',
+            '   <h3>관악 구민회관</h3>',
+            '   <p>서울 관악구 관악로5길 95 | 봉천동 1589-13</p>',
+            '   <button id="btn3" onclick="location.href=`./info.html`">자세히 보기</button>',
+            '</div>'
+        ].join('');
+
+
+        var sb_infowindow = new naver.maps.InfoWindow({
+            content: sb_map_content,
+            backgroundColor: "white",
+            borderColor: "#fbb03b",
+            borderWidth: 3,
+            anchorSize: new naver.maps.Size(10, 5),
+            pixelOffset: new naver.maps.Point(0, -10)
+        });
+        var forever_infowindow = new naver.maps.InfoWindow({
+            content: forever_map_content,
+            backgroundColor: "white",
+            borderColor: "#fbb03b",
+            borderWidth: 3,
+            anchorSize: new naver.maps.Size(10, 5),
+            pixelOffset: new naver.maps.Point(0, -10)
+        });
+        var nak_infowindow = new naver.maps.InfoWindow({
+            content: nak_map_content,
+            backgroundColor: "white",
+            borderColor: "#fbb03b",
+            borderWidth: 3,
+            anchorSize: new naver.maps.Size(10, 5),
+            pixelOffset: new naver.maps.Point(0, -10)
+        });
+        var snu_infowindow = new naver.maps.InfoWindow({
+            content: snu_map_content,
+            backgroundColor: "white",
+            borderColor: "#fbb03b",
+            borderWidth: 3,
+            anchorSize: new naver.maps.Size(10, 5),
+            pixelOffset: new naver.maps.Point(0, -10)
+        });
+        var mirim_infowindow = new naver.maps.InfoWindow({
+            content: mirim_map_content,
+            backgroundColor: "white",
+            borderColor: "#fbb03b",
+            borderWidth: 3,
+            anchorSize: new naver.maps.Size(10, 5),
+            pixelOffset: new naver.maps.Point(0, -10)
+        });
+        var gumin_infowindow = new naver.maps.InfoWindow({
+            content: gumin_map_content,
+            backgroundColor: "white",
+            borderColor: "#fbb03b",
+            borderWidth: 3,
+            anchorSize: new naver.maps.Size(10, 5),
+            pixelOffset: new naver.maps.Point(0, -10)
+        });
+        
+        naver.maps.Event.addListener(sb_marker, "click", (e) => {
+            if(sb_infowindow.getMap()){
+                sb_infowindow.close();
+            }
+            else{
+                sb_infowindow.open(map, sb_marker);
+            }
+        });
+        naver.maps.Event.addListener(forever_marker, "click", (e) => {
+            if(forever_infowindow.getMap()){
+                forever_infowindow.close();
+            }
+            else{
+                forever_infowindow.open(map, forever_marker);
+            }
+        });
+        naver.maps.Event.addListener(nak_marker, "click", (e) => {
+            if(nak_infowindow.getMap()){
+                nak_infowindow.close();
+            }
+            else{
+                nak_infowindow.open(map, nak_marker);
+            }
+        });
+        naver.maps.Event.addListener(snu_marker, "click", (e) => {
+            if(snu_infowindow.getMap()){
+                snu_infowindow.close();
+            }
+            else{
+                snu_infowindow.open(map, snu_marker);
+            }
+        });
+        naver.maps.Event.addListener(mirim_marker, "click", (e) => {
+            if(mirim_infowindow.getMap()){
+                mirim_infowindow.close();
+            }
+            else{
+                mirim_infowindow.open(map, mirim_marker);
+            }
+        });
+        naver.maps.Event.addListener(gumin_marker, "click", (e) => {
+            if(gumin_infowindow.getMap()){
+                gumin_infowindow.close();
+            }
+            else{
+                gumin_infowindow.open(map, gumin_marker);
+            }
+        });
+
+        function move(pos,dur,info,marker){
+            setTimeout(map.setZoom(17,true), dur);
+            map.panTo(pos);
+            setTimeout(() => {
+                if(!info.getMap()){
+                    info.open(map,marker);
+                }
+            },dur);
+        }
+        
+        $('.card1').on("click",function(e){
+            e.preventDefault();
+            move(sb_pos,300,sb_infowindow,sb_marker);
+        });
+        $('.card2').on("click",function(e){
+            e.preventDefault();
+            move(forever_pos,300,forever_infowindow,forever_marker);
+        });
+        $('.card3').on("click",function(e){
+            e.preventDefault();
+            move(nak_pos,300,nak_infowindow,nak_marker);
+        });
+        $('.card4').on("click",function(e){
+            e.preventDefault();
+            move(snu_pos,300,snu_infowindow,snu_marker);
+        });
+        $('.card5').on("click",function(e){
+            e.preventDefault();
+            move(mirim_pos,300,mirim_infowindow,mirim_marker);
+        });
+        $('.card6').on("click",function(e){
+            e.preventDefault();
+            move(gumin_pos,300,gumin_infowindow,gumin_marker);
+        });
+
+        // sb_infowindow.open(map, sb_marker);
+
+        var polygon = new naver.maps.Polygon({
+            map: map,
+            paths: [
+                [
+                    new naver.maps.LatLng(37.479254, 126.899109),
+                    new naver.maps.LatLng(37.484870, 126.903254),
+                    new naver.maps.LatLng(37.486516, 126.911762),
+                    new naver.maps.LatLng(37.489693, 126.918268),
+                    new naver.maps.LatLng(37.489919, 126.924345),
+                    new naver.maps.LatLng(37.494571, 126.927206),
+                    new naver.maps.LatLng(37.492243, 126.935571),
+                    new naver.maps.LatLng(37.492128, 126.944365),
+                    new naver.maps.LatLng(37.493943, 126.946105),
+                    new naver.maps.LatLng(37.490209, 126.953130),
+                    new naver.maps.LatLng(37.493656, 126.960219),
+                    new naver.maps.LatLng(37.485481, 126.962000),
+                    new naver.maps.LatLng(37.483828, 126.961106),
+                    new naver.maps.LatLng(37.482079, 126.962951),
+                    new naver.maps.LatLng(37.478913, 126.964259),
+                    new naver.maps.LatLng(37.476644, 126.968366),
+                    new naver.maps.LatLng(37.468809, 126.969795),
+                    new naver.maps.LatLng(37.461864, 126.960089),
+                    new naver.maps.LatLng(37.462063, 126.948243),   //snu
+                    // new naver.maps.LatLng(37.466779, 126.941456),
+                    new naver.maps.LatLng(37.464216, 126.940809),
+                    new naver.maps.LatLng(37.458557, 126.928285),
+                    new naver.maps.LatLng(37.461271, 126.924286),
+                    new naver.maps.LatLng(37.457524, 126.921108),
+                    new naver.maps.LatLng(37.459818, 126.915038),
+                    new naver.maps.LatLng(37.463833, 126.913978),
+                    new naver.maps.LatLng(37.469535, 126.911605),
+                    new naver.maps.LatLng(37.474916, 126.912921),
+                    new naver.maps.LatLng(37.480919, 126.909805),
+                    new naver.maps.LatLng(37.479254, 126.899109)
+                ]
+            ],
+            fillColor: '#fb6c3b',
+            fillOpacity: 0.045,
+            strokeColor: '#fb6c3b',
+            strokeOpacity: 0.9,
+            strokeWeight: 6
+        });
+
+        $(document).ready(() => {
+            $('.slick_div').slick({
+                dots: true,
+                infinite: true,
+                slidesToShow: 4,
+                slidesToScroll: 2,
+
+            });
+            $('.card').css("display","flex");
+        });
+        
+    </script>
+
 </html>

@@ -17,9 +17,19 @@ Required | Description
 [Python](https://www.python.org/downloads/) | 3.6.8 or above 
 [Django](https://www.djangoproject.com/) | 2.2.7 or above
 
-### Install Python3, virtualenv
+### Setting
+#### 1. Install python3, virtualenv
 ```
 $ sudo apt install python3
 $ sudo apt-get install python3-pip
 $ sudo pip3 install virtualenvwrapper
 ```
+
+#### 2. Create virtualenv
+```
+$ virtualenv venv
+$ source venv/bin/activate
+```
+<!-- Django is installed in virtualenv. So you have to make python virtaul environment. Then activate it. -->
+
+

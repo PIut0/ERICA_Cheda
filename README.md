@@ -22,14 +22,12 @@ Required | Description
 ```
 https://github.com/PIut0/ERICA_Cheda.git
 ```
-
 #### 1. Install python3, virtualenv
 ```
 $ sudo apt install python3
 $ sudo apt-get install python3-pip
 $ sudo pip3 install virtualenvwrapper
 ```
-
 #### 2. Create virtualenv
 ```
 $ virtualenv venv
@@ -41,10 +39,14 @@ $ source venv/bin/activate
 ```
 (venv)$ pip3 install django
 ```
-
 #### 4. Migrate
 ```
 (venv)$ cd Cheda
 (venv)$ cd django_project
 (venv)$ python manage.py migrate
 ```
+#### 5. Start the server
+```
+(venv)$ python manage.py runserver
+```
+This will start the webserver on http://127.0.0.1:8000/

@@ -16,3 +16,9 @@ Required | Description
 [Ubuntu](https://ubuntu.com/) | 18.04 LTS
 [Python](https://www.python.org/downloads/) | 3.6.8 or above 
 [Django](https://www.djangoproject.com/) | 2.2.7 or above
+
+### Install Python3
+```
+$ sudo apt install python3
+$ sudo apt-get install python3-pip
+```

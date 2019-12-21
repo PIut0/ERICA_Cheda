@@ -39,6 +39,12 @@ $ source venv/bin/activate
 
 #### 3. Install Django
 ```
-$ pip3 install django
+(venv)$ pip3 install django
 ```
 
+#### 4. Migrate
+```
+(venv)$ cd Cheda
+(venv)$ cd django_project
+(venv)$ python manage.py migrate
+```

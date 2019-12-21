@@ -33,6 +33,7 @@ $ sudo pip3 install virtualenvwrapper
 $ virtualenv venv
 $ source venv/bin/activate
 ```
+If all went well then your command line prompt should now start with (venv).
 <!-- Django is installed in virtualenv. So you have to make python virtaul environment. Then activate it. -->
 
 #### 3. Install Django

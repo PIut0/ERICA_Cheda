@@ -9,7 +9,7 @@
 
 ## Getting Started
 
-### ✔ Prerequisites
+### ✅ Prerequisites
 
 Required | Description
 --|--
@@ -17,7 +17,12 @@ Required | Description
 [Python](https://www.python.org/downloads/) | 3.6.8 or above 
 [Django](https://www.djangoproject.com/) | 2.2.7 or above
 
-### ✔ Setting
+### ✅ Installation
+#### 0. Clone this git repository
+```
+https://github.com/PIut0/ERICA_Cheda.git
+```
+
 #### 1. Install python3, virtualenv
 ```
 $ sudo apt install python3

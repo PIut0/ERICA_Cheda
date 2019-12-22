@@ -66,7 +66,7 @@ This will start the webserver on http://127.0.0.1:8000/
 ![Info_page_IMG](./info_page.png)
 
 #### You can choose a special education program for your place
-#### lace list
+#### Place list
 * Single-buntle education center (싱글벙글 교육센터)
 * Gwanak-gu Lifelong Learning Center (관악구 평생학습관)
 * Nakseong Daedong Community Service Center (낙성대동 주민센터)

@@ -225,13 +225,14 @@ body{
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 20px 0px;
     text-align: left;
 }
 .program_list .info_text h1{
     display: inline;
     font-family: NanumSquareEB;
+    font-size: 30px;
 }
 .program_list .info_text p{
     line-height: 150%;
@@ -310,10 +311,11 @@ body{
 }
 .content_box h1{
     font-family: NanumSquareEB;
-    font-size: 45px;
+    font-size: 35px;
     border-bottom: 12px solid #fbb03b;
     /* padding-bottom: 20px; */
-    height: 40px;
+    margin-top: 10px;
+    height: 30px;
     margin-bottom: 20px;
     color: #222;
 }

@@ -51,3 +51,32 @@ If all went well then your command line prompt should now start with (venv).
 (venv)$ python manage.py runserver
 ```
 This will start the webserver on http://127.0.0.1:8000/
+
+
+## Service Introduction
+
+### ✅ Main_page
+![Main_page_IMG](./main_page.png)
+
+#### You can find a place for education in the area (Gwanak)
+#### You can also use a map to find spot
+
+
+### ✅ Info_page
+![Info_page_IMG](./info_page.png)
+
+#### You can choose a special education program for your place
+#### lace list
+* Single-buntle education center (싱글벙글 교육센터)
+* Gwanak-gu Lifelong Learning Center (관악구 평생학습관)
+* Nakseong Daedong Community Service Center (낙성대동 주민센터)
+* Seoul National University (서울대학교)
+* Mirim Girls' Information High School (미림여자 정보고등학교)
+* Gwanak Community Center (관악 구민회관)
+
+
+### ✅ Content_box
+![Content_box_IMG](./content_box.png)
+
+#### You can check the details here
+#### You can apply for this program if you want.
